@@ -1,0 +1,148 @@
+:root {
+    /* ? +++++++++++++++++++++++++++++
+     ! CUSTOM PROPERTIES
+    ? ++++++++++++++++++++++++++++ */
+
+    /* ? ITEM: 
+  /* ! logo color  */
+    --c-brand-logo: #4d5ae5;
+
+    /* todo:
+  /** transition values */
+    --t-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* todo:
+  /** headings, text & link colors  */
+    --c-body-text: #434455;
+    --c-header-text: #2e2f42;
+    --c-footer-slogan-text: #f4f4fd;
+    --c-main-titles: #fff;
+    --c-headings: #2e2f42;
+    --c-links: #2e2f42;
+    --c-links-hov: #404bbf;
+    --c-team-soc-link: #fff;
+    --c-team-soc-icon: #f4f4fd;
+    --c-footer-social-link: #f4f4fd;
+    --c-customers-link: #8E8F99;
+    --c-customers-link-hov: #404bbf;
+    --c-projects-cover-text: #f4f4fd;
+    --c-footer-form-input: #fff;
+    --c-modal-form-label: #8e8f99;
+    --c-modal-form-textarea: rgba(46, 47, 66, 0.4);
+    --c-modal-form-link: #4d5ae5;
+
+    /*  todo:
+  /** backgroud colors  */
+    --c-backdrop-bg: rgba(46, 47, 66, 0.4);
+    --c-modal-box-bg: #fcfcfc;
+    --c-hero-bg: #2e2f42;
+    --c-footer-bg: #2e2f42;
+    --c-features-item-img-bg: #f4f4fd;
+    --c-team-bg: #f4f4fd;
+    --c-team-item-bg: #fff;
+    --c-team-item-link-bg-hov: #404bbf;
+    --c-team-soc-link-bg: #4d5ae5;
+    --c-footer-social-link-bg: #4d5ae5;
+    --c-footer-social-link-bg-hov: #31d0aa;
+    --c-portfolio-projects-item-bg: #fff;
+    --c-projects-cover-text-bg: #4d5ae5;
+    --c-modal-form-checkbox-bg: #404bbf;
+
+    /*  todo:
+  /** button colors : text, bg & borders */
+    --c-close-btn-icon: #2e2f42;
+    --c-close-btn-icon-hov: #fff;
+    --c-modal-close-btn-bg: #e7e9fc;
+    --c-modal-close-btn-bg-hov: #404bbf;
+    --c-main-btn-font: #fff;
+    --c-studio-btn-bg: #4d5ae5;
+    --c-studio-btn-bg-hov: #404bbf;
+    --c-portfolio-btn-font: #4d5ae5;
+    --c-portfolio-btn-bg: #f4f4fd;
+    --c-portfolio-btn-bg-hov: #404bbf;
+    --c-footer-form-btn: #fff;
+    --c-footer-form-btn-bg: #4d5ae5;
+    --c-footer-form-btn-bg-hov: #404bbf;
+    --c-modal-form-btn: #fff;
+    --c-modal-form-btn-bg: #4d5ae5;
+    --c-modal-form-btn-bg-hov: #404bbf;
+
+    /*  todo:
+  /** icons & borders colors */
+    --c-header-border: #e7e9fc;
+    --c-about-item-border: #E7E9FC;
+    --c-customers-item-border: #8E8F99;
+    --c-customers-link-border-hov: #404bbf;
+    --c-portfolio-item-border: #e7e9fc;
+    --c-footer-form-border: #fff;
+    --c-footer-form-icon: #fff;
+    --c-modal-form-input-border: rgba(46, 47, 66, 0.4);
+    --c-modal-form-textarea-border: rgba(46, 47, 66, 0.4);
+    --c-modal-form-textarea-border-foc: #4d5ae5;
+    --c-modal-form-input-foc: #4d5ae5;
+    --c-modal-form-checkbox: rgba(46, 47, 66, 0.4);
+    --c-modal-form-check-icon: #f4f4fd;
+
+}
+
+/* ? ++++++++++++++++++++++++++++
+   ! COMMON PROPERTIES
+  ? ++++++++++++++++++++++++++++ */
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--c-body-text);
+}
+
+/* todo: reset default browser styles
+? smth like reset.css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* todo: to hide title elements
+? css trick */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
+}
