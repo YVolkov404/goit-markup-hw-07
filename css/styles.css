@@ -162,7 +162,7 @@ img {
 }
 
 .container {
-    width: 427px;
+    max-width: 427px;
     padding: 0 16px;
     margin: 0 auto;
 }
@@ -189,6 +189,36 @@ img {
     letter-spacing: 0.04em;
     cursor: pointer;
     border-radius: 4px;
+}
+
+/* todo: titels
+! refact [those classes have got the same properties] */
+.features-item-title,
+.team-item-title,
+.projects-item-title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--c-headings);
+}
+
+/* todo: link & text
+! refact [those classes have got the same properties] */
+.nav-link,
+.address-link,
+.features-item-text,
+.team-item-text,
+.projects-cover-text,
+.project-item-text,
+.footer-slogan-text,
+.footer-socials-text,
+.footer-form-text,
+.modal-title-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 /* ! +++++++++++++++++++++++++++++
@@ -259,6 +289,7 @@ img {
     right: 0;
     z-index: 999;
     display: flex;
+    flex-direction: ro;
     width: 100vw;
     height: 100vh;
     padding: 80px 35px 40px 40px;
@@ -329,7 +360,7 @@ img {
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.02em;
-    color: var(--c-nav-tel-link);
+    color: var(--c-links);
     text-transform: capitalize;
 }
 
@@ -349,7 +380,7 @@ img {
 .address-list {
     display: flex;
     flex-direction: column-reverse;
-    gap: 40px;
+    column-gap: 40px;
 }
 
 .address-link[href*="tel"] {
@@ -362,6 +393,7 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--c-nav-mail-link);
+    font-style: normal;
 }
 
 .nav-soc-list {
@@ -413,7 +445,7 @@ img {
 /* SECTION: Hero */
 
 .hero {
-    max-width: 428px;
+    max-width: 100%;
     padding: 112px 0;
     margin: 0 auto;
     background-color: var(--c-hero-bg);
@@ -432,9 +464,7 @@ img {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/studio/img@2x/hero-mobile@2x.jpg),
-            url(../images/studio/img@2x/hero-tablet@2x.jpg),
-            url(../images/studio/img@2x/hero-desktop@2x.jpg);
+            url(../images/studio/img@2x/hero-mobile@2x.jpg);
     }
 }
 
@@ -620,7 +650,6 @@ img {
 }
 
 .customers-item {
-
     width: calc((100% - 48px) / 2);
     height: 88px;
 }
@@ -666,6 +695,13 @@ img {
     background-color: var(--c-footer-bg);
 }
 
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+}
+
 .footer-slogan {
     margin-bottom: 72px;
 }
@@ -682,29 +718,23 @@ img {
 .footer-slogan-text {
     display: block;
     margin: 0 auto;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-}
-
-.footer-slogan-text {
     max-width: 268px;
 }
 
 .footer-socials {
-    display: flex;
-    margin-bottom: 72px;
+    display: inline-flex;
     flex-direction: column;
+    margin-bottom: 72px;
+    color: var(--c-main-titles);
+    text-align: center;
 }
 
 .footer-socials-text {
-    margin-bottom: 16px;
-    font-size: 16px;
     font-weight: 500;
+    font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--c-main-titles);
-    text-align: center;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
 }
 
 .footer-socials-list {

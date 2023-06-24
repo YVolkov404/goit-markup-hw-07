@@ -325,7 +325,7 @@ img {
 .address-list {
   display: flex;
   font-style: normal;
-  gap: 40px;
+  row-gap: 40px;
 }
 
 .address-link {
@@ -347,7 +347,7 @@ img {
 /* SECTION: Hero */
 
 .hero {
-  max-width: 1440px;
+  max-width: 100%;
   padding: 188px 0;
   margin: 0 auto;
   background-color: var(--c-hero-bg);
@@ -682,7 +682,6 @@ img {
 /* FORM Footer */
 
 .footer-form-text {
-  margin-bottom: 16px;
   font-weight: 500;
   color: var(--c-main-titles);
 }
@@ -756,7 +755,7 @@ img {
 .projects-btn-list {
   display: flex;
   margin-bottom: 72px;
-  gap: 24px;
+  row-gap: 24px;
   justify-content: center;
 }
 
@@ -1121,3 +1120,5 @@ img {
 .modal-form-btn:focus {
   background-color: var(--c-modal-form-btn-bg-hov);
 }
+
+dddddddddddddddd
