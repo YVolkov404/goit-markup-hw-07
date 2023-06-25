@@ -1,0 +1,290 @@
+/*  ? ++++++++++++++++++++++++++++++++++  
+     ! Styles for Tablet >>>>>>>>>>>>>                  
+    ? ++++++++++++++++++++++++++++++++++ */
+
+@media screen and (min-width: 1158px) {
+
+    .container {
+        display: flex;
+        width: 1158px;
+        padding: 0 15px;
+        justify-content: center;
+    }
+
+    /* HEADER: STUDIO Page */
+
+    .nav-header {
+        margin-right: 76px;
+    }
+
+    .nav-footer {
+        margin: 0;
+    }
+
+    .address-list {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .address-link.link {
+        display: block;
+        padding: 24px 0;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.32px;
+    }
+
+    /* ! +++++++++++++++++++++++++++++
+    MAIN: STUDIO Page
+  ! ++++++++++++++++++++++++++++ */
+
+    /* SECTION: Hero */
+
+    .hero {
+        max-width: 1440px;
+        padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/studio/img@1x/hero-desktop@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/studio/img@2x/hero-desktop@2x.jpg);
+        }
+    }
+
+    .hero-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero-title {
+        margin-bottom: 48px;
+    }
+
+    /* SECTION: Features */
+
+    .features-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .features-list li:nth-last-of-type(-n+4) {
+        margin-bottom: 0;
+    }
+
+    .features-item {
+        width: calc((100% - 3 * 24px) / 4);
+        margin-bottom: 0;
+    }
+
+    .features-item-img {
+        display: flex;
+        height: 112px;
+        margin-bottom: 8px;
+        background-color: var(--c-features-item-img-bg);
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features-item-icon {
+        width: auto;
+        height: auto;
+    }
+
+    .features-item-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: var(--c-headings);
+    }
+
+    /* SECTION: About */
+
+    .about {
+        display: block;
+        padding-top: 0;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-item {
+        border: 1px solid var(--c-about-item-border);
+    }
+
+    .about-title,
+    .team-title {
+        margin-bottom: 72px;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        color: var(--c-headings);
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .about-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    /* SECTION Team */
+
+    .team-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .team-item {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+
+    .team-item:not(:nth-last-of-type(-n+2)) {
+        margin-bottom: 0;
+    }
+
+    /* SECTION Customers */
+
+    .customers-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .customers-list {
+        flex-wrap: nowrap;
+    }
+
+    .customers-item:not(:nth-last-of-type(-n+3)) {
+        margin-bottom: auto;
+    }
+
+    .customers-item {
+        width: calc((100% - 120px) / 6);
+        height: 88px;
+    }
+
+    .customers-link {
+        padding: 16px 32px;
+    }
+
+    /* ! +++++++++++++++++++++++++++++
+    FOOTER: STUDIO Page
+  ! ++++++++++++++++++++++++++++ */
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer-container {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: baseline;
+    }
+
+    .footer-slogan {
+        margin-right: 40px;
+        text-align: left;
+    }
+
+    .footer-socials {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* FORM Footer */
+
+    .footer-form-container {
+        margin-top: 0;
+    }
+
+    .footer-form-text {
+        display: block;
+        margin-bottom: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--c-main-titles);
+    }
+
+    .footer-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .footer-form-input {
+        width: 264px;
+    }
+
+    /*  ! +++++++++++++++++++++++++++++
+      MAIN: PORTFOLIO Page
+   ! +++++++++++++++++++++++++++++ */
+
+    /* SECTION Projects */
+
+    .projects {
+        padding: 100px 0 120px 0;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    /* LIST: Buttons */
+
+    .projects-btn span {
+        position: relative;
+        z-index: 2;
+    }
+
+    .projects-btn::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--c-portfolio-btn-bg-hov);
+        border-radius: 4px;
+        content: "";
+        transition:
+            color 250ms var(--t-cubic-bezier),
+            background-color 250ms var(--t-cubic-bezier),
+            box-shadow 250ms var(--t-cubic-bezier),
+            width 250ms var(--t-cubic-bezier);
+    }
+
+    /* LIST: Cards */
+
+    .projects-list {
+        display: flex;
+        column-gap: 24px;
+        flex-wrap: wrap;
+        row-gap: 48px;
+    }
+
+    .projects-list-item {
+        width: calc((100% - 48px) / 3);
+    }
+
+    .projects-list-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .projects-item-title {
+        margin-bottom: 8px;
+    }
+}

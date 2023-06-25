@@ -1,18 +1,16 @@
 :root {
-    /* ? +++++++++++++++++++++++++++++
-     ! CUSTOM PROPERTIES
-    ? ++++++++++++++++++++++++++++ */
 
-    /* ? ITEM: 
-  /* ! logo color  */
+    /*  ? +++++++++++++++++++++++++++++
+         ! CUSTOM PROPERTIES
+   ? ++++++++++++++++++++++++++++ */
+
+    /* ! logo color  */
     --c-brand-logo: #4d5ae5;
 
-    /* todo:
-  /** transition values */
+    /** transition values */
     --t-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* todo:
-  /** headings, text & link colors  */
+    /** headings, text & link colors  */
     --c-body-text: #434455;
     --c-header-text: #2e2f42;
     --c-footer-slogan-text: #f4f4fd;
@@ -35,8 +33,7 @@
     --c-nav-tel-link: #4d5ae5;
     --c-nav-mail-link: #434455;
 
-    /*  todo:
-  /** backgroud colors  */
+    /** backgroud colors  */
     --c-backdrop-bg: rgba(46, 47, 66, 0.4);
     --c-modal-box-bg: #fcfcfc;
     --c-nav-menu-container-bg: #fff;
@@ -55,8 +52,7 @@
     --c-projects-cover-text-bg: #4d5ae5;
     --c-modal-form-checkbox-bg: #404bbf;
 
-    /*  todo:
-  /** button colors : text, bg & borders */
+    /** button colors : text, bg & borders */
     --c-nav-close-btn-bg: #e7e9fc;
     --c-nav-close-btn-bg-hov: #404bbf;
     --c-nav-close-icon-hov: #fff;
@@ -77,8 +73,7 @@
     --c-modal-form-btn-bg: #4d5ae5;
     --c-modal-form-btn-bg-hov: #404bbf;
 
-    /*  todo:
-  /** icons & borders colors */
+    /** icons & borders colors */
     --c-header-border: #e7e9fc;
     --c-about-item-border: #e7e9fc;
     --c-customers-item-border: #8e8f99;
@@ -98,7 +93,7 @@
 }
 
 /* ? ++++++++++++++++++++++++++++
-   ! COMMON PROPERTIES
+        ! COMMON PROPERTIES
   ? ++++++++++++++++++++++++++++ */
 
 body {
@@ -190,33 +185,60 @@ img {
     border-radius: 4px;
 }
 
-/* refact [those classes have got the same properties] 
-.features-item-title,
-.team-item-title,
-.projects-item-title {
-    margin-bottom: 8px;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--c-headings);
-} */
+/*  ? ++++++++++++++++++++++++++++++++++  
+     ! Styles for Mobil >>>>>>>>>>>>>                  
+    ? ++++++++++++++++++++++++++++++++++ */
 
-/* refact [those classes have got the same properties]
-.nav-link,
-.address-link,
-.features-item-text,
-.team-item-text,
-.projects-cover-text,
-.project-item-text,
-.footer-slogan-text,
-.footer-socials-text,
-.footer-form-text,
-.modal-title-text {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-} */
+@media screen and (min-width: 428px) {
+
+    .container {
+        width: 428px;
+        max-width: none;
+    }
+}
+
+/* ?-Address link responsive >>>>>>>>> */
+
+@media screen and (min-width: 428px) {
+    .address-link[href*="tel"] {
+        font-size: 32px;
+    }
+
+    /* ?-Modal box width fixed >>>>>>> */
+    .modal-box {
+        max-width: 408px
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .address-link[href*="tel"] {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .address-link[href*="tel"] {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+
+    .header-nav-logo,
+    .address-link[href*="tel"] {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+
+    .header-nav-logo,
+    .address-link[href*="tel"] {
+        font-size: 20px;
+    }
+}
+
+
 
 
 /* ! +++++++++++++++++++++++++++++
@@ -231,7 +253,7 @@ img {
         0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-/* ? >>>>>>>>>> Mobile humburger */
+/* ? >>>>>>>>>> Navigation Menu */
 
 .nav {
     position: relative;
@@ -285,7 +307,6 @@ img {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 999;
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -293,8 +314,10 @@ img {
     overflow: scroll;
     background-color: var(--c-nav-menu-container-bg);
     transform: translateX(+100%);
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow:
+        0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
     transition: transform 250ms var(--t-cubic-bezier);
     flex-direction: column;
     justify-content: space-between;
@@ -456,6 +479,17 @@ img {
     background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/studio/img@2x/hero-mobile@2x.jpg);
+    }
+}
+
 .hero-title {
     max-width: 320px;
     margin: 0 auto 72px auto;
@@ -542,8 +576,10 @@ img {
     margin: 0 auto;
     background-color: var(--c-team-item-bg);
     border-radius: 0 0 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms var(--t-cubic-bezier);
 }
 
@@ -587,8 +623,11 @@ img {
 }
 
 .team-item:hover {
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.034), 0 7px 5px rgba(0, 0, 0, 0.048),
-        0 12px 10px rgba(0, 0, 0, 0.06), 0 22px 18px rgba(0, 0, 0, 0.072);
+    box-shadow:
+        0 2px 2px rgba(0, 0, 0, 0.034),
+        0 7px 5px rgba(0, 0, 0, 0.048),
+        0 12px 10px rgba(0, 0, 0, 0.06),
+        0 22px 18px rgba(0, 0, 0, 0.072);
     transition: box-shadow 250ms var(--t-cubic-bezier);
 }
 
@@ -645,7 +684,8 @@ img {
     color: var(--c-customers-link);
     border: 1px solid var(--c-customers-item-border);
     border-radius: 4px;
-    transition: color 250ms var(--t-cubic-bezier),
+    transition:
+        color 250ms var(--t-cubic-bezier),
         border-color 250ms var(--t-cubic-bezier);
     align-items: center;
     justify-content: center;
@@ -763,6 +803,9 @@ img {
 
 .footer-form-text {
     margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     font-weight: 500;
     color: var(--c-main-titles);
     text-align: center;
@@ -841,7 +884,8 @@ img {
     color: var(--c-portfolio-btn-font);
     background-color: var(--c-portfolio-btn-bg);
     border: 1px solid var(--c-portfolio-item-border);
-    transition: color 250ms var(--t-cubic-bezier),
+    transition:
+        color 250ms var(--t-cubic-bezier),
         background-color 250ms var(--t-cubic-bezier),
         border-color 250ms var(--t-cubic-bezier),
         box-shadow 250ms var(--t-cubic-bezier);
@@ -852,7 +896,9 @@ img {
     color: var(--c-main-btn-font);
     background-color: var(--c-portfolio-btn-bg-hov);
     border: 1px solid transparent;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    box-shadow:
+        0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -862,7 +908,9 @@ img {
     color: var(--c-main-btn-font);
     background-color: var(--c-portfolio-btn-bg-hov);
     border: 1px solid transparent;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    box-shadow:
+        0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -915,8 +963,10 @@ img {
 
 .projects-item-link:hover,
 .projects-item-link:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .projects-item-desc {
@@ -967,17 +1017,20 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: calc(100% - 32px);
+    width: 90%;
     min-height: 584px;
     padding: 72px 16px 24px 16px;
     cursor: pointer;
     background-color: var(--c-modal-box-bg);
     border-radius: 4px;
-    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2)),
+    filter:
+        drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2)),
         drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)),
         drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14));
     transform: translate(-50%, -50%) scaleY(1);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    box-shadow:
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms var(--t-cubic-bezier);
 }
@@ -1036,7 +1089,6 @@ img {
 
 .modal-form {
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -1139,8 +1191,10 @@ img {
     cursor: pointer;
     border: 1px solid var(--c-modal-form-checkbox);
     border-radius: 2px;
-    transition: background-color 250ms var(--t-cubic-bezier),
-        border 250ms var(--t-cubic-bezier), fill 250ms var(--t-cubic-bezier);
+    transition:
+        background-color 250ms var(--t-cubic-bezier),
+        border 250ms var(--t-cubic-bezier),
+        fill 250ms var(--t-cubic-bezier);
     align-items: center;
     justify-content: center;
     fill: transparent;

@@ -1,65 +1,6 @@
-/* ?-Address link responsive >>>>>>>>> */
-
-@media screen and (max-width: 427px) {
-  .address-link[href*="tel"] {
-    font-size: 32px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .address-link[href*="tel"] {
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .address-link[href*="tel"] {
-    font-size: 24px;
-  }
-}
-
-@media screen and (max-width: 310px) {
-
-  .header-nav-logo,
-  .address-link[href*="tel"] {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 280px) {
-
-  .header-nav-logo,
-  .address-link[href*="tel"] {
-    font-size: 20px;
-  }
-}
-
-/*  ++++++++++++++++++++++++++++++++++  
-     ! Styles for Mobil >>>>>>>>>>>>>                  
-    ++++++++++++++++++++++++++++++++++ */
-
-@media screen and (min-width: 428px) {
-
-  @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    .hero {
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)),
-        url(../images/studio/img@2x/hero-mobile@2x.jpg);
-    }
-  }
-
-  .container {
-    width: 428px;
-    max-width: none;
-  }
-}
-
-/*  ++++++++++++++++++++++++++++++++++  
+/*  ? ++++++++++++++++++++++++++++++++++  
      ! Styles for Tablet >>>>>>>>>>>>>                  
-    ++++++++++++++++++++++++++++++++++ */
+    ? ++++++++++++++++++++++++++++++++++ */
 
 @media screen and (min-width: 768px) {
 
@@ -85,20 +26,9 @@
     }
   }
 
-  /* Hero bg image */
-  @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    .hero {
-      background-image:
-        linear-gradient(rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)),
-        url(../images/studio/img@2x/hero-tablet@2x.jpg);
-    }
-  }
-
-  /* HEADER: STUDIO Page */
+  /* ! +++++++++++++++++++++++++++++
+    HEADER: PORTFOLIO Page
+  ! +++++++++++++++++++++++++++++ */
 
   .container {
     width: 768px;
@@ -239,7 +169,9 @@
     display: none;
   }
 
-  /* MAIN: STUDIO Page */
+  /* ! +++++++++++++++++++++++++++++
+    MAIN: PORTFOLIO Page
+  ! +++++++++++++++++++++++++++++ */
 
   /* SECTION: Hero */
 
@@ -249,6 +181,17 @@
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
       url(../images/studio/img@1x/hero-tablet@1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/studio/img@2x/hero-tablet@2x.jpg);
+    }
   }
 
   .hero-title {
@@ -335,7 +278,9 @@
     margin-bottom: 48px;
   }
 
-  /* FOOTER: STUDIO Page */
+  /* ! +++++++++++++++++++++++++++++
+    FOOTER: PORTFOLIO Page
+  ! +++++++++++++++++++++++++++++ */
 
   .footer-form-container {
     padding: 0;
@@ -400,15 +345,18 @@
     margin-bottom: 72px;
     flex-wrap: nowrap;
     row-gap: normal;
-    column-gap: 24px;
+    gap: 24px;
     justify-content: center;
+  }
+
+  .projects-btn {
+    padding: 12px 24px;
   }
 
   /* LIST: Cards */
 
   .projects-list {
     display: flex;
-    flex-direction: row;
     column-gap: 24px;
     flex-wrap: wrap;
     row-gap: normal;
@@ -426,242 +374,7 @@
     margin: 0;
   }
 
-  .projects-btn {
-    padding: 12px 24px;
-  }
-
-  /* MODAL box  */
-
   .modal-box {
-    width: calc(100% - 360px);
+    width: 408px;
   }
-}
-
-/* !-Styles for Desktop  */
-
-@media screen and (min-width: 1158px) {
-
-  @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    .hero {
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)),
-        url(../images/studio/img@2x/hero-desktop@2x.jpg);
-    }
-  }
-
-  .container {
-    display: flex;
-    width: 1158px;
-    padding: 0 15px;
-    justify-content: center;
-  }
-
-  /* HEADER: STUDIO Page */
-
-  .nav-header {
-    margin-right: 76px;
-  }
-
-  .nav-footer {
-    margin: 0;
-  }
-
-  .address-list {
-    flex-direction: row;
-    gap: 40px;
-  }
-
-  .address-link.link {
-    display: block;
-    padding: 24px 0;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.32px;
-  }
-
-  /* MAIN: STUDIO Page  */
-
-  /* SECTION: Hero */
-
-  .hero {
-    max-width: 1440px;
-    padding: 188px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),
-      url(../images/studio/img@1x/hero-desktop@1x.jpg);
-  }
-
-  .hero-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .hero-title {
-    margin-bottom: 48px;
-  }
-
-  /* SECTION: Features */
-
-  .features-list {
-    display: flex;
-    gap: 24px;
-  }
-
-  .features-list li:nth-last-of-type(-n+4) {
-    margin-bottom: 0;
-  }
-
-  .features-item {
-    width: calc((100% - 3 * 24px) / 4);
-    margin-bottom: 0;
-  }
-
-  .features-item-img {
-    display: flex;
-    height: 112px;
-    margin-bottom: 8px;
-    background-color: var(--c-features-item-img-bg);
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .features-item-icon {
-    width: auto;
-    height: auto;
-  }
-
-  .features-item-title {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-
-  /* SECTION: About */
-
-  .about {
-    display: block;
-    padding-top: 0;
-  }
-
-  .about-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about-item {
-    border: 1px solid var(--c-about-item-border);
-  }
-
-  .about-title,
-  .team-title {
-    margin-bottom: 72px;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    color: var(--c-headings);
-    text-align: center;
-    text-transform: capitalize;
-  }
-
-  .about-list {
-    display: flex;
-    gap: 24px;
-  }
-
-  /* SECTION Team */
-
-  .team-container {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-
-  .team-item {
-    width: calc((100% - 3 * 24px) / 4);
-  }
-
-  .team-item:not(:nth-last-of-type(-n+2)) {
-    margin-bottom: 0;
-  }
-
-  /* SECTION Customers */
-
-  .customers-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-
-  .customers-list {
-    flex-wrap: nowrap;
-  }
-
-  .customers-item:not(:nth-last-of-type(-n+3)) {
-    margin-bottom: auto;
-  }
-
-  .customers-item {
-    width: calc((100% - 120px) / 6);
-    height: 88px;
-  }
-
-  .customers-link {
-    padding: 16px 32px;
-  }
-
-  /* FOOTER: STUDIO Page */
-
-  .footer {
-    padding: 100px 0;
-  }
-
-  .footer-container {
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: baseline;
-  }
-
-  .footer-slogan {
-    margin-right: 40px;
-    text-align: left;
-  }
-
-  .footer-socials {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* FORM Footer */
-
-  .footer-form-container {
-    margin-top: 0;
-  }
-
-  .footer-form-text {
-    display: block;
-    margin-bottom: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--c-main-titles);
-  }
-
-  .footer-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-  }
-
-  .footer-form-input {
-    width: 264px;
-  }
-
-
-
 }
