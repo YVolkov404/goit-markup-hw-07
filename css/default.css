@@ -235,7 +235,7 @@ img {
 
 /* todo: logo
 ! refact [.footer-slogan-text has the same properies] */
-.nav-logo,
+.header-nav-logo,
 .footer-slogan-logo {
   display: block;
   padding: 24px 0;
@@ -247,7 +247,7 @@ img {
   text-transform: uppercase;
 }
 
-.nav-logo {
+.header-nav-logo {
   margin-right: 76px;
   color: var(--c-header-text);
 }
@@ -259,7 +259,7 @@ img {
 
 .nav-link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding: 24px 0;
   font-weight: 500;
   color: var(--c-links);
