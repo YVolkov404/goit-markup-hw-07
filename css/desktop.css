@@ -229,6 +229,7 @@
     /* FORM Footer */
 
     .footer-form-container {
+        width: auto;
         margin-top: 0;
     }
 
@@ -244,7 +245,6 @@
     .footer-form {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         align-items: center;
         gap: 24px;
     }

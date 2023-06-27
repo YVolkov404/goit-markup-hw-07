@@ -622,11 +622,7 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-}
-
-.customers-item:not(:nth-last-of-type(-n+2)) {
-    margin-bottom: 72px;
+    gap: 72px 16px;
 }
 
 .customers-item {
@@ -685,7 +681,7 @@ img {
 }
 
 .footer-slogan {
-    max-width: 268px;
+    max-width: 264px;
     text-align: center;
 }
 
@@ -696,7 +692,6 @@ img {
 
 .footer-slogan-text {
     display: inline-block;
-    max-width: 264px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
