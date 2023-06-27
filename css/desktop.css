@@ -11,10 +11,29 @@
         justify-content: center;
     }
 
+    .section {
+        padding: 120px 0;
+    }
+
     /* HEADER: STUDIO Page */
 
+    .nav {
+        justify-content: flex-start;
+    }
+
     .nav-header {
+        width: 115px;
         margin-right: 76px;
+    }
+
+    .nav-menu-container {
+        width: 100%;
+    }
+
+    .nav-wrap {
+        width: inherit;
+        gap: 0;
+        justify-content: space-between;
     }
 
     .nav-footer {
@@ -106,6 +125,10 @@
         line-height: 1.2;
         letter-spacing: 0.02em;
         color: var(--c-headings);
+    }
+
+    .features-item-text {
+        font-weight: normal;
     }
 
     /* SECTION: About */

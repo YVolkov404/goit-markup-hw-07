@@ -146,6 +146,7 @@
 
   .address-link.link {
     font-size: 12px;
+    font-weight: normal;
     font-style: normal;
     line-height: 1.17;
     letter-spacing: 0.48px;
@@ -208,7 +209,7 @@
   .features-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .features-list li:nth-last-of-type(-n+2) {
@@ -219,12 +220,15 @@
     width: calc((100% - 24px) / 2);
   }
 
+  .features-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
   .features-item-title {
     text-align: left;
   }
 
   /* SECTION Team */
-
 
   .team-container {
     padding: 0 108px;
@@ -234,22 +238,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .team-item {
     width: calc((100% - 24px) / 2);
     margin-bottom: 0;
   }
-
-  .team-item:not(:last-child) {
-    margin-bottom: auto;
-  }
-
-  .team-item:not(:nth-last-of-type(-n+2)) {
-    margin-bottom: 40px;
-  }
-
 
   /* SECTION: Customers */
 
@@ -262,7 +257,7 @@
   }
 
   .customers-list {
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .customers-item {
@@ -274,17 +269,12 @@
     margin-bottom: 0;
   }
 
-  .customers-item:not(:nth-last-of-type(-n+3)) {
-    margin-bottom: 48px;
-  }
-
   /* ! +++++++++++++++++++++++++++++
     FOOTER: PORTFOLIO Page
   ! +++++++++++++++++++++++++++++ */
 
   .footer-form-container {
     padding: 0;
-    margin-top: 48px;
   }
 
   .footer-container {
@@ -295,7 +285,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 24px;
+    gap: 72px 24px;
     justify-content: flex-start;
   }
 
@@ -367,7 +357,7 @@
   }
 
   .projects-list-item:not(:last-child) {
-    margin-bottom: 72px;
+    margin: 0 0 72px 0;
   }
 
   .projects-list-item:last-child {
@@ -376,5 +366,6 @@
 
   .modal-box {
     width: 408px;
+    padding: 72px 24px 24px 24px;
   }
 }

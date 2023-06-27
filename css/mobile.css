@@ -167,7 +167,6 @@ img {
 }
 
 .logo {
-    display: inline-block;
     color: var(--c-brand-logo);
 }
 
@@ -196,49 +195,6 @@ img {
         max-width: none;
     }
 }
-
-/* ?-Address link responsive >>>>>>>>> */
-
-@media screen and (min-width: 428px) {
-    .address-link[href*="tel"] {
-        font-size: 32px;
-    }
-
-    /* ?-Modal box width fixed >>>>>>> */
-    .modal-box {
-        max-width: 408px
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .address-link[href*="tel"] {
-        font-size: 28px;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .address-link[href*="tel"] {
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 310px) {
-
-    .header-nav-logo,
-    .address-link[href*="tel"] {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 280px) {
-
-    .header-nav-logo,
-    .address-link[href*="tel"] {
-        font-size: 20px;
-    }
-}
-
-
 
 
 /* ! +++++++++++++++++++++++++++++
@@ -304,6 +260,7 @@ img {
 }
 
 .nav-menu-container {
+    z-index: 999;
     position: fixed;
     top: 0;
     right: 0;
@@ -801,6 +758,10 @@ img {
 
 /* FORM Footer */
 
+.footer-form-container {
+    width: 100%;
+}
+
 .footer-form-text {
     margin-bottom: 16px;
     font-size: 16px;
@@ -1235,4 +1196,51 @@ img {
 .modal-form-btn:hover,
 .modal-form-btn:focus {
     background-color: var(--c-modal-form-btn-bg-hov);
+}
+
+/* ?-Address link responsive >>>>>>>>> */
+
+@media screen and (min-width: 428px) {
+    .address-link[href*="tel"] {
+        font-size: 32px;
+    }
+
+    /* ?-Modal box width fixed >>>>>>> */
+    .modal-box {
+        max-width: 408px
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .address-link[href*="tel"] {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .address-link[href*="tel"] {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .address-link[href*="tel"] {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+
+    .header-nav-logo,
+    .address-link[href*="tel"] {
+        font-size: 20px;
+    }
+}
+
+@media screen and (maxn-width: 280px) {
+
+    .header-nav-logo,
+    .address-link[href*="tel"] {
+        font-size: 20px;
+    }
 }
